@@ -826,6 +826,7 @@ height:1100px;
     <p>Designed and built by Priyanshu Satija.</p>
   </div>
   <div>
+      <h1 id="mode" onclick="modes()">Lightmode</h1>
     <a href="https://wa.me/qr/GRXJXR7TYMF5O1">    <abbr title="Gmail-ID">  <img src="whatsapp.png" alt=""  id="gmail"></abbr></a>
   </div>
 </div>
@@ -963,7 +964,81 @@ control.style.marginLeft="30px";
 
 }
 
-  
+  //Mode ki js starts from here 
+
+var mode=()=>{
+          var j=document.getElementsByTagName("body");
+       j[0].style.backgroundColor="white";
+  var q=document.getElementsByClassName("that");
+  q[0].style.backgroundColor="white";
+  q[0].style.color="white";
+  q[0].style.border="5px solid yellow";
+   document.getElementById("mode").innerHTML="Lightmode";
+var ok=document.getElementsByClassName("geth1");
+        ok=Array.from(ok)
+        for(var i=0;i<ok.length;i++)
+          {
+            ok[i].style.color="black";
+          }
+  var p=()=>{
+var j=document.getElementById("aaa2");
+    j.play();    
+  }
+  p();
+
+}
+
+
+        var mode1=()=>{
+
+          var j=document.getElementsByTagName("body");
+       j[0].style.backgroundColor="black";
+  var q=document.getElementsByClassName("that");
+  q[0].style.color="aqua";
+  q[0].style.backgroundColor="black";
+  q[0].style.border="5px solid white";
+  document.getElementById("mode").innerHTML="Darkmode";
+          var ok=document.getElementsByClassName("geth1");
+        ok=Array.from(ok)
+        for(var i=0;i<ok.length;i++)
+          {
+            ok[i].style.color="aqua";
+          }      
+           var p=()=>{
+var j=document.getElementById("aaa1");
+    j.play();    
+  }
+          p();
+        }
+
+
+///Promise code which help to run the mode js in both case light and width 
+var modes=()=>{
+    let pro=new Promise(function(resolve,reject)
+{
+    var j=document.getElementById("mode").innerHTML;
+    if(j=="Darkmode")
+  {
+    resolve(mode);
+  }
+  else
+  {
+    reject(mode1);
+  }
+
+});
+pro.then(
+    function(value)
+    {
+        mode();
+    },
+    function(value)
+    {
+        mode1();
+    }
+);
+
+}
 </script>
       <audio id="run"> <source src="tts_audio_1695661207899.wav"  type="audio/wav"> </audio>
   <script>
