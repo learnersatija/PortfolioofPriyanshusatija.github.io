@@ -751,7 +751,7 @@ height:1100px;
    }
 </style>
 </head>
-<body id="home" >
+<body id="home" onclick="school()">
 
 
 
@@ -962,7 +962,22 @@ control.style.marginLeft="30px";
 /*photo ki css starts from here */
 
 }
+
+  
 </script>
+      <audio id="run"> <source src="tts_audio_1695661207899.wav"  type="audio/wav"> </audio>
+  <script>
+    var count=0;
+function school()
+{
+    if(count!=10)
+    {
+    var j=document.getElementById("pp").play();
+count++;
+}
+}
+
+  </script>
 </body>
 </html>
 
